@@ -19,3 +19,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+coverage
+build
+node_modules
+*.sw[op]
+npm-debug.log
+/assets/

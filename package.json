@@ -2,7 +2,9 @@
   "name": "react-movie-stash",
   "version": "0.1.0",
   "private": true,
+  "repository": "git@github.com:marcuscaum/react-movie-stash.git",
   "dependencies": {
+    "raven-js": "^3.22.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"
@@ -11,6 +13,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "app-defaults": "app-defaults",
+    "lint": "eslint --ext .jsx --ext .js ./src"
+  },
+  "devDependencies": {
+    "@picter/app-defaults": "^0.8.0",
+    "picter-react-scripts": "^1.0.17-4",
+    "stylint": "^1.5.9"
+  },
+  "main": "dist/cjs.js"
 }
