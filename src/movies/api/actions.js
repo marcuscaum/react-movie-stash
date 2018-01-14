@@ -6,4 +6,3 @@ export const findMovie = async (params = {}) => tmdb.call('/search/movie', param
 
 tmdb.call('/movie/550', {});
 tmdb.call('/search/movie', { query: 'Jack+Reacher' });
-console.log(tmdb.getCurrentSettings());
