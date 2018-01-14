@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const NavigationBar = ({ toggleMenu, menuOpened }) => (
@@ -16,8 +17,9 @@ export const NavigationBar = ({ toggleMenu, menuOpened }) => (
       docked={false}
       onRequestChange={toggleMenu}
     >
-      <MenuItem>Menu Item</MenuItem>
-      <MenuItem>Menu Item 2</MenuItem>
+      <Link to="/movies">
+        <MenuItem> Movies </MenuItem>
+      </Link>
     </Drawer>
   </div>
 );
