@@ -4,10 +4,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
+
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import { App } from './shared/containers';
+import Movies from './movies';
 import reducers from './reducers';
+
 
 const store = createStore(reducers);
 
@@ -15,6 +18,7 @@ export const Routes = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Route path="/" component={App} />
+      <Route path="/movies" component={Movies} />
     </BrowserRouter>
   </Provider>
 );
