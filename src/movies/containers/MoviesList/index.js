@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { getMovies } from 'src/movies/selectors';
+import { getMovies } from '../../../movies/selectors';
 
 export const Movies = props => {
   console.log(props);
