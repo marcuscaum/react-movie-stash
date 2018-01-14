@@ -1,15 +1,10 @@
 import React from 'react';
-import './index.css';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Movies from '../../../movies';
 
-export const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </div>
+export default () => (
+  <Switch>
+    <Route path="/movies" component={Movies} />
+    <Redirect from="/" to="/movies" />
+  </Switch>
 );
-
-export default App;
