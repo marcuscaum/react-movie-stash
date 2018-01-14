@@ -5,6 +5,7 @@ import { compose, lifecycle } from 'recompose';
 import { getMovies } from '../../../movies/selectors';
 import { createMovie } from '../../../movies/actions';
 import { MoviesList } from '../../../movies/components';
+import '../../../movies/api/actions';
 
 export const Movies = props => (
   <React.Fragment>
