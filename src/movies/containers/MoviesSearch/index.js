@@ -2,6 +2,7 @@ import React from 'react';
 import { compose, withState, withHandlers } from 'recompose';
 
 import { MoviesSearchForm } from '../../components';
+import { findMovie } from '../../api/actions';
 
 export const MoviesSearch = props => <MoviesSearchForm {...props} />;
 
@@ -11,9 +12,11 @@ export default compose(
     onChange: ({ updateValue }) => event => {
       updateValue(event.target.value);
     },
-    onSubmit: ({ value }) => event => {
+    onSubmit: ({ value }) => async event => {
       event.preventDefault();
-      console.log(value);
+      const lo = await findMovie({
+        query: value,
+      });
     },
   }),
 )(MoviesSearch);

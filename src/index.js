@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { Map } from 'immutable';
-
 
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';

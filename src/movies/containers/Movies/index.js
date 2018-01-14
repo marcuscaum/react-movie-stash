@@ -6,8 +6,6 @@ import { getMovies } from '../../../movies/selectors';
 import { createMovie } from '../../../movies/actions';
 import { MoviesList } from '../../../movies/components';
 import MoviesSearch from '../MoviesSearch';
-import '../../../movies/api/actions';
-
 
 export const Movies = props => (
   <React.Fragment>
