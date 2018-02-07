@@ -1,10 +1,7 @@
-import React from 'react';
 import { compose, withHandlers } from 'recompose';
 
 import { MoviesSearchForm } from '../../components';
 import { findMovie } from '../../api/actions';
-
-export const MoviesSearch = props => <MoviesSearchForm {...props} />;
 
 export default compose(
   withHandlers({
@@ -19,4 +16,4 @@ export default compose(
       setMoviesList(movieslist);
     },
   }),
-)(MoviesSearch);
+)(MoviesSearchForm);
