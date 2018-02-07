@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 
 import { MoviesListItem } from '../';
-import StyledGridList from './styles/StyledGridList';
+import { MoviesListStyled } from './styles/MoviesListStyled';
 
 export const MoviesList = ({ movies }) => (
-  <StyledGridList
-    cellHeight={180}
-  >
+  <MoviesListStyled>
     {movies.valueSeq().map(movie => <MoviesListItem key={movie.get('id')} movie={movie} />)};
-  </StyledGridList>
+  </MoviesListStyled>
 );
 
 MoviesList.propTypes = {

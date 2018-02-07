@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
+import { GridTile } from 'material-ui/GridList';
 
 export const MoviesListItem = ({ movie }) => (
-  <div>
-    <h1>{movie.get('title')}</h1>
-    <p>{movie.get('description')}</p>
-  </div>
+  <GridTile
+    title={movie.get('title')}
+    subtitle={<p>{movie.get('description')}</p>}
+  >
+    {movie.get('poster_path') &&
+      <img
+        alt="poster"
+        src={`http://image.tmdb.org/t/p/w185/${movie.get('poster_path')}`}
+      />
+    }
+  </GridTile>
 );
 
 MoviesListItem.propTypes = {
