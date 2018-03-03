@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 
 export const AppBarStyled = styled(AppBar)`
   background-color: #2d2d2d !important;
-  padding-bottom: 13px;
+  padding-bottom: 7px;
 
   button {
     &:first-child {
