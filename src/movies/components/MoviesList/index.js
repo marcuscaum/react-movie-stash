@@ -7,7 +7,7 @@ import { MoviesListStyled } from './styles/MoviesListStyled';
 
 export const MoviesList = ({ movies }) => (
   <MoviesListStyled>
-    {movies.valueSeq().map(movie => <MoviesListItem key={movie.get('id')} movie={movie} />)};
+    {movies.valueSeq().map(movie => <MoviesListItem key={movie.get('id')} movie={movie} />)}
   </MoviesListStyled>
 );
 
