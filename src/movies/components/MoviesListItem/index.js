@@ -2,24 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { withState } from 'recompose';
+import { GridTile } from 'material-ui/GridList';
 
-
-import MoviesListItemStyled from './index.styled';
 
 export const MoviesListItem = ({ movie, imageIsLoaded, image }) => (
-  <MoviesListItemStyled
-    title={image.toString()}
-    subtitle={<p>{movie.get('description')}</p>}
-    image={image ? 1 : 0}
+  <GridTile
+    title={movie.get('original_title')}
+    subtitle={<p>{movie.get('overview')}</p>}
+    style={image ? {} : { display: 'none' }}
+    titleBackground="black"
   >
-    {movie.get('poster_path') &&
-      <img
-        alt="poster"
-        onLoad={() => imageIsLoaded(true)}
-        src={`http://image.tmdb.org/t/p/w185/${movie.get('poster_path')}`}
-      />
-    }
-  </MoviesListItemStyled>
+    <img
+      alt="poster"
+      onLoad={() => imageIsLoaded(true)}
+      src={`http://image.tmdb.org/t/p/w185/${movie.get('poster_path')}`}
+    />
+  </GridTile>
 );
 
 MoviesListItem.propTypes = {

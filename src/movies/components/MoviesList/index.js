@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 
 import { MoviesListItem } from '../';
-import { MoviesListStyled } from './styles/MoviesListStyled';
+import MoviesListStyled from './index.styled';
 
 export const MoviesList = ({ movies }) => (
   <MoviesListStyled>

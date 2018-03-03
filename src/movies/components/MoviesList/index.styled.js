@@ -6,9 +6,22 @@ export const MoviesListStyled = styled.div`
   flex-wrap: wrap;
   justify-content: initial;
   padding: 10px;
-  & > div {
+
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  > div {
     height: 280px !important;
+    max-width: 180px;
+    overflow: hidden;
     margin: 5px;
+
+    > div {
+      padding: 15px 15px 0 0;
+    }
   }
 `;
 
