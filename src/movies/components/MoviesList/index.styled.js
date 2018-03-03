@@ -15,7 +15,7 @@ export const MoviesListStyled = styled.div`
 
   > div {
     height: 280px !important;
-    max-width: 180px;
+    max-width: 173px;
     overflow: hidden;
     margin: 5px;
 
