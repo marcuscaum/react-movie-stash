@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { compose, branch, renderComponent } from 'recompose';
 import PropTypes from 'prop-types';
-import AppBar from 'material-ui/AppBar';
 
 import { LoadingComponent } from '../../../shared/components/LoadingComponent';
 
@@ -10,18 +9,19 @@ import { getMoviesList } from '../../selectors';
 import { createMovie, setMoviesList } from '../../actions';
 import { MoviesList } from '../../components';
 import MoviesSearch from '../MoviesSearch';
+import { AppBarStyled } from './index.styled';
 
 
-export const Movies = ({ handleToggle, toggle, ...rest }) => (
+const Movies = props => (
   <React.Fragment>
-    <AppBar
+    <AppBarStyled
       title="Movies"
       iconClassNameRight="muidocs-icon-navigation-expand-more"
-      onLeftIconButtonClick={() => handleToggle(!toggle)}
+      onLeftIconButtonClick={() => props.handleToggle(!props.toggle)}
     >
-      <MoviesSearch {...rest} />
-    </AppBar>
-    <MoviesList {...rest} />
+      <MoviesSearch {...props} />
+    </AppBarStyled>
+    <MoviesList {...props} />
   </React.Fragment>
 );
 
